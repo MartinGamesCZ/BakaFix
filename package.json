@@ -7,12 +7,19 @@
     "dev": "bun run launcher/index.ts --watch"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/axios": "^0.14.0",
+    "@types/bun": "latest",
+    "@types/jsdom": "^21.1.7",
+    "@types/luxon": "^3.4.2"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "discord.js": "^14.15.3"
+    "axios": "^1.7.6",
+    "chalk": "^5.3.0",
+    "discord.js": "^14.15.3",
+    "jsdom": "^25.0.0",
+    "luxon": "^3.5.0"
   }
 }
