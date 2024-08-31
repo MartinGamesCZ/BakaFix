@@ -1,0 +1,18 @@
+{
+  "name": "bakafix",
+  "module": "launcher/index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "bun run launcher/index.ts",
+    "dev": "bun run launcher/index.ts --watch"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "discord.js": "^14.15.3"
+  }
+}
