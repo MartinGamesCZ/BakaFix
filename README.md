@@ -6,4 +6,9 @@ BakaFix je sada přídavných nástrojů pro bakaláře.
 
 ... protože je co zlepšovat.
 
-## Work in progress
+## Plánované funkce
+- Upozornění na změnu v rozvrhu
+- Vylepšený rozvrh
+- A další, záleží na nápadech...
+
+### ! Work in progress !
