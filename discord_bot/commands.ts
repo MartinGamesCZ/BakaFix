@@ -1,14 +1,13 @@
 import { REST, Routes, SlashCommandBuilder } from "discord.js";
 import Config from "../config/config";
 
-const commands = [
-  new SlashCommandBuilder()
-    .setName("ping")
-    .setDescription("Replies with Pong!")
-    .toJSON(),
-];
-
-export async function registerCommands(serverId: string) {
+export async function registerCommands(
+  serverId: string,
+  commands: {
+    data: SlashCommandBuilder;
+    execute: any;
+  }[],
+) {
   const rest = new REST({
     version: "9",
   }).setToken(Config.json.app.discordbot.token);
@@ -18,6 +17,6 @@ export async function registerCommands(serverId: string) {
       Config.json.app.discordbot.client_id,
       serverId,
     ),
-    { body: commands },
+    { body: commands.map((c) => c.data.toJSON()) },
   );
 }

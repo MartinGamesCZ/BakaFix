@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+            body {
+                font-family: "Plus Jakarta Sans", sans-serif;
+                font-size: 16px;
+
+                background-color: #121415;
+                color: #efefef;
+
+                padding: 2rem;
+                margin: 0;
+
+                box-sizing: border-box;
+
+                width: 1080px;
+            }
+
+            h1 {
+                text-align: center;
+
+                margin-bottom: 1rem;
+            }
+
+            div {
+                /*border: 1px solid #efefef;*/
+            }
+
+            .timetable {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                width: calc(1080px - 2 * 2rem);
+            }
+
+            .timetable .day {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+
+                width: calc(1080px - 2 * 2rem);
+            }
+
+            .timetable .header {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+
+                width: calc(1080px - 2 * 2rem);
+            }
+
+            .timetable .day .lesson,
+            .timetable .day .label {
+                min-width: calc((1080px - 2 * 2rem - 12 * 5px) / 13);
+                height: calc((1080px - 2 * 2rem - 12 * 5px) / 13);
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                border: 2px solid #0000;
+            }
+
+            .timetable .day .lesson {
+                background-color: #fff2;
+
+                border-radius: 5px;
+            }
+
+            .timetable .day .lesson[data-type="absent"] {
+                border: 2px solid #0f05;
+
+                background-color: transparent;
+            }
+
+            .timetable .day .lesson[data-type="free"] {
+                border: 2px dashed #fff2;
+
+                background-color: transparent;
+            }
+
+            .timetable .header div {
+                min-width: calc((1080px - 2 * 2rem - 12 * 5px) / 13);
+                height: calc((1080px - 2 * 2rem - 12 * 5px) / 13);
+
+                text-align: center;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                border: 2px solid #0000;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Rozvrh {{class}} ({{type}})</h1>
+        <div class="timetable">
+            <div class="header">
+                <div></div>
+                <div>0</div>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
+            </div>
+            {{#days}}
+            <div class="day">
+                <div class="label">{{name}}</div>
+                {{#lessons}}
+                <div class="lesson" data-type="{{type}}">
+                    <p>{{subject}}</p>
+                </div>
+                {{/lessons}}
+            </div>
+            {{/days}}
+        </div>
+    </body>
+</html>
