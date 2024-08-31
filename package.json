@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "start": "bun run launcher/index.ts",
-    "dev": "bun run launcher/index.ts --watch"
+    "dev": "bun --watch launcher/index.ts"
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",
