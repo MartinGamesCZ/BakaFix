@@ -43,6 +43,8 @@ Pro všechny aplikace je nutno poskytnout server bakalářů. Ten se nachází p
 
 ## Timetable Watcher
 
+![image](https://github.com/user-attachments/assets/4014165c-dd13-4265-a8c8-45785a3fee02)
+
 Nástroj, který sleduje změny v rozvrhu a upozorní na ně pomocí discord webhooku.
 
 ### Upozornění
