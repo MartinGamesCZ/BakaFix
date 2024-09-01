@@ -12,6 +12,7 @@ const levels = {
 const sources = {
   [LogSource.LAUNCHER]: chalk.magenta,
   [LogSource.DISCORDBOT]: chalk.cyan,
+  [LogSource.TIMETABLEWATCHER]: chalk.green,
 };
 
 export default function logger(source: LogSource) {
@@ -19,7 +20,7 @@ export default function logger(source: LogSource) {
     const datetime = DateTime.now().toFormat("dd. MM. yyyy HH:mm:ss");
 
     console.log(
-      `${chalk.gray(datetime.padEnd(22, " "))} ${sources[source](source.padEnd(12, " "))} ${levels[level](level.padEnd(6, " "))} ${message}`,
+      `${chalk.gray(datetime.padEnd(22, " "))} ${sources[source](source.padEnd(18, " "))} ${levels[level](level.padEnd(6, " "))} ${message}`,
     );
   };
 }

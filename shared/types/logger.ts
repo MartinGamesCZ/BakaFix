@@ -8,4 +8,5 @@ export enum LogLevel {
 export enum LogSource {
   LAUNCHER = "LAUNCHER",
   DISCORDBOT = "DISCORD BOT",
+  TIMETABLEWATCHER = "TIMETABLE WATCHER",
 }

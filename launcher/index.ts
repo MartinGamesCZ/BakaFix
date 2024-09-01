@@ -7,7 +7,7 @@ if (Config.app.enabled.discordbot) {
 }
 
 if (true) {
-  const ca = await import("../change_announcer/index");
+  const ca = await import("../timetable_watcher/index");
 
   ca._start();
 }
