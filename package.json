@@ -3,7 +3,8 @@
   "module": "launcher/index.ts",
   "type": "module",
   "scripts": {
-    "start": "bun run launcher/index.ts",
+    "start": "npm run start",
+    "start:bun": "bun run launcher/index.ts",
     "dev": "bun --watch launcher/index.ts"
   },
   "devDependencies": {
