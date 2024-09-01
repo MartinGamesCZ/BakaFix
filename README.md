@@ -59,6 +59,7 @@ Konfigurace se nachází v konfiguračním souboru (sekce Konfigurace) pod klí�
 - `webhook` - URL discord webhooku, na který se budou posílat upozornění
 - `class` - ID třídy -> alfanumerický kód na konci URL veřejného rozvrhu konkrétní třídy
 - `className` - Název třídy -> název třídy, který se zobrazuje v upozornění
+- `timeframe` - časové období (Actual nebo Next)
 
 ## Plánované funkce
 - Vylepšený rozvrh
