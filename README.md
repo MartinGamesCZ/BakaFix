@@ -38,6 +38,9 @@ Konfigurační soubor je ve formátu JSON a musí být umístěn v adresáři `c
 }
 ```
 
+### Konfigurace bakalářů
+Pro všechny aplikace je nutno poskytnout server bakalářů. Ten se nachází pod klíčem `baka.public.baseURL`.
+
 ## Timetable Watcher
 
 Nástroj, který sleduje změny v rozvrhu a upozorní na ně pomocí discord webhooku.
@@ -46,6 +49,7 @@ Nástroj, který sleduje změny v rozvrhu a upozorní na ně pomocí discord web
 - Změny, na které již bylo upozorněno se ukládají v proměnné, tudíž po restartu serveru budou odeslány znovu (na řešení pracuji)
 - Chybí podpora pro dělené hodiny, vždy vezme první, co je v rozvrhu
 - Testováno pouze na změnách typu odpadlá hodina a obecná absence třídy, na ostatních nemám zatím jak otestovat
+- Zatím funguje jen pro veřejné rozvrhy
 
 ### Konfigurace
 
