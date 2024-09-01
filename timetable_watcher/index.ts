@@ -17,7 +17,7 @@ import getClassList from "../shared/baka/public/classlist";
 import logger from "../shared/log/logger";
 import { LogLevel, LogSource } from "../shared/types/logger";
 
-const updateInterval = 0.5 * 60 * 1000; // 10 minutes
+const updateInterval = 5 * 60 * 1000; // 5 minutes
 
 let announcedChanges: any[] = [];
 
